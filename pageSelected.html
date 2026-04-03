@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avantika Rao | Mobile Architect</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         /* --- NEW COLOR THEME: Midnight & Cyan --- */
         :root {
@@ -21,7 +23,11 @@
             --glow: rgba(0, 242, 254, 0.5);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -31,82 +37,163 @@
             padding-top: var(--nav-height);
             scroll-behavior: smooth;
             background-image: radial-gradient(circle at top right, rgba(0, 242, 254, 0.05), transparent 40%),
-                              radial-gradient(circle at bottom left, rgba(79, 172, 254, 0.05), transparent 40%);
+                radial-gradient(circle at bottom left, rgba(79, 172, 254, 0.05), transparent 40%);
         }
 
-        .container { max-width: 1150px; margin: 0 auto; padding: 0 20px; }
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
         /* --- NAVBAR --- */
         .navbar {
             position: fixed;
-            top: 0; left: 0; width: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
             height: var(--nav-height);
             background: rgba(10, 15, 28, 0.85);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 0 5%; z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            z-index: 1000;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
 
         .nav-brand {
-            font-size: 1.5rem; font-weight: 800; color: #fff; text-decoration: none; letter-spacing: 1px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 1px;
             background: linear-gradient(to right, var(--primary), var(--secondary));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
         .nav-links a {
-            color: var(--text-dim); text-decoration: none; font-weight: 600; font-size: 0.95rem;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
             transition: color 0.3s ease;
         }
-        .nav-links a:hover { color: var(--primary); }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
 
         /* --- SECTIONS & HERO --- */
-        section { padding: 80px 0; }
-        
+        section {
+            padding: 80px 0;
+        }
+
         .section-title {
-            font-size: 2.2rem; font-weight: 800; margin-bottom: 40px; color: #fff;
-            display: inline-block; position: relative;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 40px;
+            color: #fff;
+            display: inline-block;
+            position: relative;
         }
+
         .section-title::after {
-            content: ''; position: absolute; bottom: -10px; left: 0; width: 50%; height: 3px;
-            background: linear-gradient(to right, var(--primary), transparent); border-radius: 2px;
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary), transparent);
+            border-radius: 2px;
         }
 
-        .hero { padding: 100px 0 60px 0; }
+        .hero {
+            padding: 100px 0 60px 0;
+        }
+
         .hero-name {
-            font-size: 4rem; font-weight: 800; margin-bottom: 5px;
-        }
-        .hero-title {
-            font-size: 1.3rem; font-weight: 600; margin-bottom: 25px;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 5px;
         }
 
-        .contact-info { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 30px; font-size: 1rem; color: var(--text-main); }
-        .contact-info a { color: var(--text-main); text-decoration: none; transition: 0.3s; }
-        .contact-info a:hover { color: var(--primary); }
-        .contact-info i { color: var(--primary); margin-right: 8px; }
+        .hero-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        .contact-info a {
+            color: var(--text-main);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--primary);
+        }
+
+        .contact-info i {
+            color: var(--primary);
+            margin-right: 8px;
+        }
 
         /* --- CARD DESIGN --- */
         .grid-container {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            align-items: stretch;
+            /* Ensures all cards in a row have equal height */
         }
 
         .glass-card {
             background: var(--bg-card);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 20px; padding: 35px;
+            border-radius: 20px;
+            padding: 35px;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative; overflow: hidden;
-            display: flex; flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            /* Allows internal elements to use flex-grow */
+            height: 100%;
         }
 
         .glass-card::before {
-            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
             background: linear-gradient(to right, var(--primary), var(--secondary));
-            opacity: 0; transition: opacity 0.3s ease;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .glass-card:hover {
@@ -114,62 +201,205 @@
             border-color: rgba(0, 242, 254, 0.3);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 242, 254, 0.1);
         }
-        .glass-card:hover::before { opacity: 1; }
+
+        .glass-card:hover::before {
+            opacity: 1;
+        }
 
         /* --- EXPERIENCE TIMELINE --- */
         .experience-box {
-            border-left: 2px solid rgba(0, 242, 254, 0.3); padding-left: 30px; margin-bottom: 50px; position: relative;
+            border-left: 2px solid rgba(0, 242, 254, 0.3);
+            padding-left: 30px;
+            margin-bottom: 50px;
+            position: relative;
         }
+
         .experience-box::before {
-            content: ''; position: absolute; left: -7px; top: 5px; width: 12px; height: 12px;
-            background: var(--primary); border-radius: 50%; box-shadow: 0 0 10px var(--glow);
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--glow);
         }
-        .exp-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 8px; }
-        .exp-role { font-size: 1.4rem; font-weight: 800; color: #fff; }
-        .exp-date { color: var(--primary); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.5px; }
-        .exp-company { font-size: 1.1rem; font-weight: 600; margin-bottom: 15px; color: var(--text-dim); }
-        .exp-details { list-style-position: outside; padding-left: 15px; color: var(--text-dim); font-size: 0.95rem; }
-        .exp-details li { margin-bottom: 10px; }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .exp-role {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .exp-date {
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .exp-company {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-dim);
+        }
+
+        .exp-details {
+            list-style-position: outside;
+            padding-left: 15px;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
+        .exp-details li {
+            margin-bottom: 10px;
+        }
 
         /* --- PROJECT SPECIFICS --- */
-        .project-title { font-size: 1.4rem; font-weight: 800; color: #fff; margin-bottom: 15px; }
-        .project-bullets { list-style-type: none; padding-left: 0; margin-bottom: 20px; flex-grow: 1; }
+        .project-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .project-bullets {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 25px;
+            flex-grow: 1;
+            /* EXPANDS to fill empty space, pushing tags down */
+        }
+
         .project-bullets li {
-            position: relative; padding-left: 20px; margin-bottom: 10px; font-size: 0.9rem; color: var(--text-dim);
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            line-height: 1.5;
         }
+
         .project-bullets li::before {
-            content: '▹'; position: absolute; left: 0; color: var(--primary); font-weight: bold;
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
         }
+
         .project-link {
-            display: inline-flex; align-items: center; gap: 8px; color: var(--text-main); font-size: 0.85rem; font-weight: 600;
-            text-decoration: none; padding: 8px 16px; background: rgba(255,255,255,0.05); border-radius: 50px;
-            margin-bottom: 15px; width: fit-content; border: 1px solid rgba(255,255,255,0.1); transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-main);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50px;
+            margin-bottom: 15px;
+            width: fit-content;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
         }
-        .project-link:hover { background: var(--primary); color: #000; border-color: var(--primary); }
+
+        .project-link:hover {
+            background: var(--primary);
+            color: #000;
+            border-color: var(--primary);
+        }
 
         /* --- SKILLS TAGS --- */
-        .tags-container { margin-top: auto; }
-        .skill-tag {
-            display: inline-block; background: rgba(0, 242, 254, 0.08); color: var(--secondary);
-            border: 1px solid rgba(0, 242, 254, 0.2); padding: 5px 12px; border-radius: 50px;
-            font-size: 0.75rem; font-weight: 700; margin: 0 6px 6px 0; letter-spacing: 0.5px;
+        .tags-container {
+            margin-top: auto;
+            /* MAGNET: Pulls tags to the absolute bottom of the card */
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
         }
-        .skill-group-title {
-            color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;
-        }
-        .skill-group-title i { color: var(--primary); width: 20px; text-align: center; }
 
-        footer { text-align: center; padding: 40px 0; background: #05080f; border-top: 1px solid rgba(255, 255, 255, 0.05); color: var(--text-dim); }
+        .skill-tag {
+            display: inline-block;
+            background: rgba(0, 242, 254, 0.08);
+            color: var(--secondary);
+            border: 1px solid rgba(0, 242, 254, 0.2);
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .skill-group-title {
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-group-title i {
+            color: var(--primary);
+            width: 20px;
+            text-align: center;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            background: #05080f;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-dim);
+        }
 
         @media (max-width: 768px) {
-            .navbar { flex-direction: column; height: auto; padding: 15px; }
-            .nav-links { margin-top: 15px; flex-wrap: wrap; justify-content: center; gap: 15px; }
-            body { padding-top: 100px; }
-            .hero-name { font-size: 2.8rem; }
-            .exp-header { flex-direction: column; align-items: flex-start; gap: 5px; }
+            .navbar {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            body {
+                padding-top: 100px;
+            }
+
+            .hero-name {
+                font-size: 2.8rem;
+            }
+
+            .exp-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <nav class="navbar">
@@ -187,23 +417,29 @@
         <div class="glass-card" style="padding: 50px;">
             <h1 class="hero-name">Avantika Rao</h1>
             <p class="hero-title">Mobile Application Developer</p>
-            
+
             <div class="contact-info">
-                <a href="mailto:raoavantika51@gmail.com"><i class="fa-solid fa-envelope"></i> raoavantika51@gmail.com</a>
+                <a href="mailto:raoavantika51@gmail.com"><i class="fa-solid fa-envelope"></i>
+                    raoavantika51@gmail.com</a>
                 <a href="tel:7303903867"><i class="fa-solid fa-phone"></i> 7303903867</a>
-                <a href="https://linkedin.com/in/avantika-rao-054001la"><i class="fa-brands fa-linkedin"></i> in/avantika-rao-054001la</a>
+                <a href="https://linkedin.com/in/avantika-rao-054001la9" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/avantika-rao" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
                 <span><i class="fa-solid fa-location-dot"></i> Gurgaon, Haryana, India</span>
             </div>
-            
+
             <p style="color: var(--text-dim); font-size: 1.05rem; max-width: 900px;">
-                4+ years of experience specializing in high-performance Android, Flutter, and Compose Multiplatform (CMP) development. Proven track record of delivering 10+ scalable applications across logistics, HR, e-commerce, and social media domains. Expert in Clean Architecture, reactive state management, and end-to-end deployment via Google Play Console and App Store Connect.
+                4+ years of experience specializing in high-performance Android, Flutter, and Compose Multiplatform
+                (CMP) development. Proven track record of delivering 10+ scalable applications across logistics, HR,
+                e-commerce, and social media domains. Expert in Clean Architecture, reactive state management, and
+                end-to-end deployment via Google Play Console and App Store Connect.
             </p>
         </div>
     </header>
 
     <section id="experience" class="container">
         <h2 class="section-title">Professional Experience</h2>
-        
+
         <div class="experience-box">
             <div class="exp-header">
                 <span class="exp-role">Mobile Application Developer</span>
@@ -211,9 +447,11 @@
             </div>
             <div class="exp-company">Binary Semantics Limited | Gurugram</div>
             <ul class="exp-details">
-                <li>Led development of high-performance applications using Flutter and Compose Multiplatform (CMP), ensuring seamless UI consistency.</li>
+                <li>Led development of high-performance applications using Flutter and Compose Multiplatform (CMP),
+                    ensuring seamless UI consistency.</li>
                 <li>Leveraged Platform Channels and CMP interop to integrate native device functionalities.</li>
-                <li>Managed complete application lifecycle from Clean Architecture design to Google Play Console and App Store Connect deployment.</li>
+                <li>Managed complete application lifecycle from Clean Architecture design to Google Play Console and App
+                    Store Connect deployment.</li>
             </ul>
         </div>
 
@@ -224,7 +462,8 @@
             </div>
             <div class="exp-company">Agicent Technologies | Noida</div>
             <ul class="exp-details">
-                <li>Developed and maintained 8+ high-quality applications (Patriot Nation, Studio Think, Fastrack Fasting, Kistl, SnoopCrowd, etc.).</li>
+                <li>Developed and maintained 8+ high-quality applications (Patriot Nation, Studio Think, Fastrack
+                    Fasting, Kistl, SnoopCrowd, etc.).</li>
                 <li>Leveraged Kotlin, Java, Jetpack Compose, and XML within MVVM and MVC architectures.</li>
                 <li>Integrated Socket.io for real-time chat, Google Maps API, and ExoPlayer for media streaming.</li>
                 <li>Utilized Retrofit, Room, Hilt, Coroutines, Flow, and Firebase for robust backend communication.</li>
@@ -232,214 +471,329 @@
         </div>
     </section>
 
-    <section id="projects" style="background: rgba(255,255,255,0.01);">
+    <section id="projects">
         <div class="container">
             <h2 class="section-title">Project Portfolio</h2>
             <div class="grid-container">
 
                 <div class="glass-card">
                     <h3 class="project-title">Sirius</h3>
+                    <p
+                        style="color: var(--secondary); font-size: 0.85rem; margin-top: -10px; margin-bottom: 15px; font-weight: 600; opacity: 0.9;">
+                        <i class="fa-solid fa-building" style="font-size: 0.75rem; margin-right: 5px;"></i> Binary
+                        Semantics Limited
+                    </p>
+                    <div
+                        style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px; position: relative; z-index: 10;">
+                        <a href="#" target="_blank" class="project-link"><i class="fa-brands fa-google-play"></i> Play
+                            Store</a>
+                        <a href="#" target="_blank" class="project-link"><i class="fa-brands fa-app-store-ios"></i> App
+                            Store</a>
+                    </div>
                     <ul class="project-bullets">
-                        <li>Developed a cross-platform HR application using Compose Multiplatform (CMP) to streamline company operations, attendance, and leave management.</li>
-                        <li>Engineered a robust, reactive codebase utilizing Koin, Ktor, and Coil with a hybrid MVVM/MVI approach.</li>
-                        <li>Integrated Google Places API and DataStore for secure local persistence.</li>
+                        <li>Developed a cross-platform HR application using Compose Multiplatform (CMP) to streamline
+                            company operations, including employee attendance tracking, leave management, and
+                            organizational workflows.</li>
+                        <li>Engineered a robust, reactive codebase utilizing Koin for dependency injection, Ktor for
+                            networking, and Coil for image loading, following Clean Architecture with a hybrid MVVM/MVI
+                            approach.</li>
+                        <li>Integrated Google Places API for location-based features and utilized DataStore for secure,
+                            efficient local data persistence across platforms.</li>
                     </ul>
                     <div class="tags-container">
-                        <span class="skill-tag">CMP</span><span class="skill-tag">Koin & Ktor</span><span class="skill-tag">DataStore</span>
+                        <span class="skill-tag">Compose Multiplatform</span><span class="skill-tag">Kotlin</span><span
+                            class="skill-tag">Koin</span><span class="skill-tag">Ktor</span><span
+                            class="skill-tag">Clean Architecture</span><span class="skill-tag">MVVM/MVI</span><span
+                            class="skill-tag">Google Places API</span><span class="skill-tag">DataStore</span><span
+                            class="skill-tag">Reactive UI</span>
                     </div>
                 </div>
 
                 <div class="glass-card">
                     <h3 class="project-title">CollaborIX</h3>
+                    <p
+                        style="color: var(--secondary); font-size: 0.85rem; margin-top: -10px; margin-bottom: 15px; font-weight: 600; opacity: 0.9;">
+                        <i class="fa-solid fa-building" style="font-size: 0.75rem; margin-right: 5px;"></i> Binary
+                        Semantics Limited
+                    </p>
+                    <div
+                        style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px; position: relative; z-index: 10;">
+                        <a href="#" target="_blank" class="project-link"><i class="fa-brands fa-google-play"></i> Play
+                            Store</a>
+                        <a href="#" target="_blank" class="project-link"><i class="fa-brands fa-app-store-ios"></i> App
+                            Store</a>
+                    </div>
                     <ul class="project-bullets">
-                        <li>Led development of a dual-sided logistics marketplace using Flutter and BLoC for transport and warehouse bidding.</li>
-                        <li>Architected using Clean Architecture, GoRouter, and modular principles.</li>
-                        <li>Optimized UX via platform channels for native features and streamlined end-to-end flows.</li>
+                        <li>Led the development of a dual-sided logistics service marketplace using Flutter and BLoC,
+                            enabling buyers to post specific requirements and sellers to list transport, CHA, and
+                            warehouse services.</li>
+                        <li>Architected the application using Clean Architecture, GoRouter, and modular development
+                            principles for high code reusability across Android and iOS.</li>
+                        <li>Optimized user experience by implementing platform channels for native features and
+                            streamlining the end-to-end bid-driven ecosystem.</li>
                     </ul>
                     <div class="tags-container">
-                        <span class="skill-tag">Flutter</span><span class="skill-tag">BLoC</span><span class="skill-tag">GoRouter</span>
+                        <span class="skill-tag">Flutter</span><span class="skill-tag">BLoC</span><span
+                            class="skill-tag">GoRouter</span><span class="skill-tag">Platform Channels</span><span
+                            class="skill-tag">Modular Architecture</span><span class="skill-tag">Native
+                            Interop</span><span class="skill-tag">Logistics Logic</span>
                     </div>
                 </div>
 
                 <div class="glass-card">
                     <h3 class="project-title">OnclickIX</h3>
+                    <p
+                        style="color: var(--secondary); font-size: 0.85rem; margin-top: -10px; margin-bottom: 15px; font-weight: 600; opacity: 0.9;">
+                        <i class="fa-solid fa-building" style="font-size: 0.75rem; margin-right: 5px;"></i> Binary
+                        Semantics Limited
+                    </p>
+                    <div
+                        style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px; position: relative; z-index: 10;">
+                        <a href="#" target="_blank" class="project-link"><i class="fa-brands fa-google-play"></i> Play
+                            Store</a>
+                        <a href="#" target="_blank" class="project-link"><i class="fa-brands fa-app-store-ios"></i> App
+                            Store</a>
+                    </div>
                     <ul class="project-bullets">
-                        <li>Developed a cross-platform logistics app using Flutter, BLoC, and Clean Architecture for transport requirements.</li>
-                        <li>Engineered order placement system with real-time Consignment Note (CN) tracking and price-acceptance.</li>
-                        <li>Implemented comprehensive Push Notification system for automated updates.</li>
+                        <li>Developed a cross-platform logistics application using Flutter, BLoC, and Clean Architecture
+                            for streamlined transport and warehouse requirement posting.</li>
+                        <li>Engineered a robust order placement system featuring real-time CN (Consignment Note)
+                            tracking and a dynamic price-acceptance flow.</li>
+                        <li>Implemented a comprehensive Push Notification system to provide automated, step-by-step
+                            updates throughout the service lifecycle.</li>
                     </ul>
                     <div class="tags-container">
-                        <span class="skill-tag">Flutter</span><span class="skill-tag">Push Notifications</span>
+                        <span class="skill-tag">Flutter</span><span class="skill-tag">Real-time Tracking</span><span
+                            class="skill-tag">FCM Push Notifications</span><span class="skill-tag">GoRouter</span><span
+                            class="skill-tag">Price Logic</span><span class="skill-tag">State Management</span>
                     </div>
                 </div>
 
                 <div class="glass-card">
                     <h3 class="project-title">Patriot Nation (Social Media)</h3>
-                    <a href="https://play.google.com/store/apps/details?id=com.patriot.nation.agicent" target="_blank" class="project-link"><i class="fa-brands fa-google-play"></i> View on Play Store</a>
+                    <p
+                        style="color: var(--secondary); font-size: 0.85rem; margin-top: -10px; margin-bottom: 15px; font-weight: 600; opacity: 0.9;">
+                        <i class="fa-solid fa-building" style="font-size: 0.75rem; margin-right: 5px;"></i> Agicent
+                        Technologies
+                    </p>
+                    <div style="position: relative; z-index: 10; margin-bottom: 15px;">
+                        <a href="https://play.google.com/store/apps/details?id=com.patriot.nation.agicent"
+                            target="_blank" class="project-link"><i class="fa-brands fa-google-play"></i> Play Store</a>
+                    </div>
                     <ul class="project-bullets">
-                        <li>Implemented features like user authentication, post creation, commenting, liking, and sharing.</li>
+                        <li>Implemented features like user authentication, post creation, commenting, liking, and
+                            sharing for a high-engagement social platform.</li>
                         <li>Integrated Facebook and Twitter authentication for user convenience.</li>
-                        <li>Coordinated with the team, conducted testing, and ensured adherence to timelines.</li>
+                        <li>Coordinated with the team, conducted testing, and ensured adherence to project timelines.
+                        </li>
                     </ul>
                     <div class="tags-container">
-                        <span class="skill-tag">Social Auth</span><span class="skill-tag">API Integration</span>
+                        <span class="skill-tag">Kotlin</span><span class="skill-tag">Firebase</span><span
+                            class="skill-tag">Facebook SDK</span><span class="skill-tag">Twitter API</span><span
+                            class="skill-tag">REST APIs</span><span class="skill-tag">Social Auth</span>
                     </div>
                 </div>
 
                 <div class="glass-card">
                     <h3 class="project-title">Studio Think (Health & Fitness)</h3>
-                    <a href="https://play.google.com/store/apps/details?id=com.studiothink.android" target="_blank" class="project-link"><i class="fa-brands fa-google-play"></i> View on Play Store</a>
+                    <p
+                        style="color: var(--secondary); font-size: 0.85rem; margin-top: -10px; margin-bottom: 15px; font-weight: 600; opacity: 0.9;">
+                        <i class="fa-solid fa-building" style="font-size: 0.75rem; margin-right: 5px;"></i> Agicent
+                        Technologies
+                    </p>
+                    <div style="position: relative; z-index: 10; margin-bottom: 15px;">
+                        <a href="https://play.google.com/store/apps/details?id=com.studiothink.android" target="_blank"
+                            class="project-link"><i class="fa-brands fa-google-play"></i> Play Store</a>
+                    </div>
                     <ul class="project-bullets">
-                        <li>Developed a personal development app utilizing Kotlin, XML, and Material design.</li>
-                        <li>Utilized Retrofit, Hilt, Coroutines, LiveData, and Room database.</li>
+                        <li>Developed a health app using Kotlin and Material design. Integrated Facebook, Google, and
+                            LinkedIn authentication.</li>
+                        <li>Utilized Retrofit, Hilt, Coroutines, LiveData, and Room database for efficient data
+                            management.</li>
                         <li>Implemented foreground services for audio playback and Alarm Manager for reminders.</li>
                     </ul>
                     <div class="tags-container">
-                        <span class="skill-tag">Kotlin & XML</span><span class="skill-tag">Room DB</span><span class="skill-tag">Foreground Services</span>
+                        <span class="skill-tag">Hilt</span><span class="skill-tag">Retrofit</span><span
+                            class="skill-tag">Coroutines</span><span class="skill-tag">Room DB</span><span
+                            class="skill-tag">LiveData</span><span class="skill-tag">Foreground Services</span><span
+                            class="skill-tag">In-App Purchases</span><span class="skill-tag">Alarm Manager</span>
                     </div>
                 </div>
 
                 <div class="glass-card">
                     <h3 class="project-title">Kistl (Online Shopping)</h3>
+                    <p
+                        style="color: var(--secondary); font-size: 0.85rem; margin-top: -10px; margin-bottom: 15px; font-weight: 600; opacity: 0.9;">
+                        <i class="fa-solid fa-building" style="font-size: 0.75rem; margin-right: 5px;"></i> Agicent
+                        Technologies
+                    </p>
                     <ul class="project-bullets">
-                        <li>Managed development for browsing, cart management, and order placement flows.</li>
-                        <li>Integrated Google Maps for location-based services and implemented search functionality.</li>
-                        <li>Ensured a smooth user experience through rigorous testing.</li>
+                        <li>Managed Android app development, overseeing implementation of browsing, cart management, and
+                            order placement.</li>
+                        <li>Integrated Google Maps for location-based services and implemented advanced search
+                            functionality.</li>
+                        <li>Ensured smooth user experience through rigorous testing and team coordination.</li>
                     </ul>
                     <div class="tags-container">
-                        <span class="skill-tag">Google Maps API</span><span class="skill-tag">E-commerce Flows</span>
+                        <span class="skill-tag">Android SDK</span><span class="skill-tag">Google Maps API</span><span
+                            class="skill-tag">Search API</span><span class="skill-tag">Cart Logic</span><span
+                            class="skill-tag">Order Lifecycle</span><span class="skill-tag">Geofencing</span>
                     </div>
                 </div>
 
                 <div class="glass-card">
                     <h3 class="project-title">Fastrack Fasting</h3>
-                    <a href="https://play.google.com/store/apps/details?id=com.fastrack.android" target="_blank" class="project-link"><i class="fa-brands fa-google-play"></i> View on Play Store</a>
+                    <p
+                        style="color: var(--secondary); font-size: 0.85rem; margin-top: -10px; margin-bottom: 15px; font-weight: 600; opacity: 0.9;">
+                        <i class="fa-solid fa-building" style="font-size: 0.75rem; margin-right: 5px;"></i> Agicent
+                        Technologies
+                    </p>
+                    <div style="position: relative; z-index: 10; margin-bottom: 15px;">
+                        <a href="https://play.google.com/store/apps/details?id=com.fastrack.android" target="_blank"
+                            class="project-link"><i class="fa-brands fa-google-play"></i> Play Store</a>
+                    </div>
                     <ul class="project-bullets">
-                        <li>Directed app development for plan customization, progress tracking, and local reminders.</li>
-                        <li>Integrated Firebase for user authentication and real-time chat.</li>
-                        <li>Utilized Google Maps for location-based features.</li>
+                        <li>Directed development for plan customization, progress tracking, and local reminders.</li>
+                        <li>Integrated Firebase for real-time chat and Google Maps for location-based features.</li>
                     </ul>
                     <div class="tags-container">
-                        <span class="skill-tag">Firebase Chat</span><span class="skill-tag">Local Reminders</span>
+                        <span class="skill-tag">Firebase Auth</span><span class="skill-tag">Real-time Chat</span><span
+                            class="skill-tag">Data Tracking</span><span class="skill-tag">Local
+                            Notifications</span><span class="skill-tag">Google Maps</span>
                     </div>
                 </div>
 
                 <div class="glass-card">
-                    <h3 class="project-title">SnoopCrowd (Dating App)</h3>
+                    <h3 class="project-title">SnoopCrowd (Dating)</h3>
+                    <p
+                        style="color: var(--secondary); font-size: 0.85rem; margin-top: -10px; margin-bottom: 15px; font-weight: 600; opacity: 0.9;">
+                        <i class="fa-solid fa-building" style="font-size: 0.75rem; margin-right: 5px;"></i> Agicent
+                        Technologies
+                    </p>
+                    <div style="position: relative; z-index: 10; margin-bottom: 15px;">
+                        <a href="#" target="_blank" class="project-link"><i class="fa-brands fa-google-play"></i> Play
+                            Store</a>
+                    </div>
                     <ul class="project-bullets">
-                        <li>Led development with distinct user and manager modules, ensuring seamless integration.</li>
-                        <li>Implemented profile creation, matching, messaging, and venue browsing.</li>
-                        <li>Conducted team coordination, bug fixing, and thorough testing.</li>
+                        <li>Led development with user and manager modules. Implemented profile creation, matching,
+                            messaging, and venue browsing.</li>
+                        <li>Oversaw module development and ensured seamless integration and bug fixing.</li>
                     </ul>
                     <div class="tags-container">
-                        <span class="skill-tag">Modular App</span><span class="skill-tag">Messaging</span>
+                        <span class="skill-tag">Modular Architecture</span><span class="skill-tag">Matching
+                            Algorithms</span><span class="skill-tag">Messaging</span><span class="skill-tag">Venue
+                            APIs</span><span class="skill-tag">Integration Testing</span>
                     </div>
                 </div>
 
                 <div class="glass-card">
-                    <h3 class="project-title">ICourt (Dating App)</h3>
+                    <h3 class="project-title">ICourt (Dating)</h3>
+                    <p
+                        style="color: var(--secondary); font-size: 0.85rem; margin-top: -10px; margin-bottom: 15px; font-weight: 600; opacity: 0.9;">
+                        <i class="fa-solid fa-building" style="font-size: 0.75rem; margin-right: 5px;"></i> Agicent
+                        Technologies
+                    </p>
                     <ul class="project-bullets">
-                        <li>Led Android app development focusing on avatar creation features.</li>
-                        <li>Engineered real-time chat functionality featuring a unique 3-minute reply timer.</li>
-                        <li>Coordinated team efforts to ensure smooth deployment and maintenance.</li>
+                        <li>Led Android development of avatar creation and real-time chat with a custom 3-minute reply
+                            timer logic.</li>
+                        <li>Managed team coordination and deployment lifecycle.</li>
                     </ul>
                     <div class="tags-container">
-                        <span class="skill-tag">Real-time Chat</span><span class="skill-tag">Custom Timers</span>
+                        <span class="skill-tag">Avatar Systems</span><span class="skill-tag">Custom Timers</span><span
+                            class="skill-tag">Real-time Chat</span><span class="skill-tag">App Deployment</span><span
+                            class="skill-tag">Team Leadership</span>
                     </div>
                 </div>
 
                 <div class="glass-card">
-                    <h3 class="project-title">Gigzz (Job Board App)</h3>
+                    <h3 class="project-title">Gigzz (Job Board)</h3>
+                    <p
+                        style="color: var(--secondary); font-size: 0.85rem; margin-top: -10px; margin-bottom: 15px; font-weight: 600; opacity: 0.9;">
+                        <i class="fa-solid fa-building" style="font-size: 0.75rem; margin-right: 5px;"></i> Agicent
+                        Technologies
+                    </p>
                     <ul class="project-bullets">
-                        <li>Designed functionalities for Individuals, Companies, and Job Seekers including job posting and applications.</li>
-                        <li>Developed comprehensive search, filtering, and bookmarking systems.</li>
-                        <li>Leveraged Kotlin, XML, and MVVM architecture.</li>
+                        <li>Designed features for job posting, application management, and request functionalities for
+                            individuals and companies.</li>
+                        <li>Developed comprehensive search, filtering, and bookmarking functionalities.</li>
+                        <li>Leveraged Kotlin, XML, and MVVM architecture with third-party API integrations.</li>
                     </ul>
                     <div class="tags-container">
-                        <span class="skill-tag">Kotlin & XML</span><span class="skill-tag">MVVM</span><span class="skill-tag">Search & Filtering</span>
+                        <span class="skill-tag">Kotlin</span><span class="skill-tag">MVVM</span><span
+                            class="skill-tag">Filtering Logic</span><span class="skill-tag">Search API</span><span
+                            class="skill-tag">Third-party APIs</span><span class="skill-tag">XML Layouts</span>
                     </div>
                 </div>
 
                 <div class="glass-card">
-                    <h3 class="project-title">BTYB (Shopping App)</h3>
+                    <h3 class="project-title">BTYB (Shopping)</h3>
+                    <p
+                        style="color: var(--secondary); font-size: 0.85rem; margin-top: -10px; margin-bottom: 15px; font-weight: 600; opacity: 0.9;">
+                        <i class="fa-solid fa-building" style="font-size: 0.75rem; margin-right: 5px;"></i> Agicent
+                        Technologies
+                    </p>
                     <ul class="project-bullets">
-                        <li>Implemented a social shopping application utilizing MVVM architecture.</li>
-                        <li>Utilized Compose UI, Navigation Component, Ktor, Hilt, ExoPlayer, and Socket.io.</li>
-                        <li>Facilitated seamless user interactions and real-time transaction processing with Payment Integration.</li>
+                        <li>Implemented a social shopping application utilizing Jetpack Compose UI, Navigation
+                            Component, and Ktor.</li>
+                        <li>Integrated ExoPlayer, Socket.io, Datastore, Hilt, Coroutines, and Flow for real-time
+                            transaction processing.</li>
                     </ul>
                     <div class="tags-container">
-                        <span class="skill-tag">Compose UI</span><span class="skill-tag">ExoPlayer</span><span class="skill-tag">Socket.io</span><span class="skill-tag">Payment Gateway</span>
+                        <span class="skill-tag">Jetpack Compose</span><span class="skill-tag">Ktor</span><span
+                            class="skill-tag">Socket.io</span><span class="skill-tag">ExoPlayer</span><span
+                            class="skill-tag">DataStore</span><span class="skill-tag">Coroutines</span><span
+                            class="skill-tag">Flow</span><span class="skill-tag">Hilt</span><span
+                            class="skill-tag">Payment Integration</span>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <h3 class="project-title">Movie-Verse</h3>
+                    <p
+                        style="color: var(--primary); font-size: 0.85rem; margin-top: -10px; margin-bottom: 15px; font-weight: 600; opacity: 0.9;">
+                        <i class="fa-solid fa-user-graduate" style="font-size: 0.75rem; margin-right: 5px;"></i>
+                        Personal Learning Project
+                    </p>
+                    <div style="position: relative; z-index: 10; margin-bottom: 15px;">
+                        <a href="https://github.com" target="_blank" class="project-link"><i
+                                class="fa-brands fa-github"></i> GitHub Repo</a>
+                    </div>
+                    <ul class="project-bullets">
+                        <li>A personal exploration into high-performance media streaming and data caching using Jetpack
+                            Compose and Room.</li>
+                        <li>Implemented a custom Paging 3 source to handle complex nested JSON structures from public
+                            movie APIs.</li>
+                    </ul>
+                    <div class="tags-container">
+                        <span class="skill-tag">Jetpack Compose</span><span class="skill-tag">Paging 3</span><span
+                            class="skill-tag">Retrofit</span><span class="skill-tag">MVVM</span>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <h3 class="project-title">Crypto-Pulse</h3>
+                    <p
+                        style="color: var(--primary); font-size: 0.85rem; margin-top: -10px; margin-bottom: 15px; font-weight: 600; opacity: 0.9;">
+                        <i class="fa-solid fa-user-graduate" style="font-size: 0.75rem; margin-right: 5px;"></i>
+                        Personal Learning Project
+                    </p>
+                    <div style="position: relative; z-index: 10; margin-bottom: 15px;">
+                        <a href="https://github.com" target="_blank" class="project-link"><i
+                                class="fa-brands fa-github"></i> GitHub Repo</a>
+                    </div>
+                    <ul class="project-bullets">
+                        <li>Learning project built to practice real-time state management and WebSockets in a
+                            Kotlin-first environment.</li>
+                        <li>Utilized Kotlin Coroutines and SharedFlow to push live price updates to a reactive UI
+                            dashboard.</li>
+                    </ul>
+                    <div class="tags-container">
+                        <span class="skill-tag">Kotlin</span><span class="skill-tag">WebSockets</span><span
+                            class="skill-tag">SharedFlow</span><span class="skill-tag">Clean Architecture</span>
                     </div>
                 </div>
 
             </div>
-        </div>
-    </section>
-<section id="skills" class="container">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="grid-container">
-            
-            <div class="glass-card" style="display: block;"> <div class="skill-group-title" style="margin-bottom: 12px;">
-                    <i class="fa-solid fa-code"></i> Languages & Platforms
-                </div>
-                <div class="tags-container" style="margin-bottom: 25px;">
-                    <span class="skill-tag">Java</span><span class="skill-tag">Kotlin</span><span class="skill-tag">Dart</span>
-                    <span class="skill-tag">Swift (Basics/iOS)</span><span class="skill-tag">Flutter</span>
-                    <span class="skill-tag">Compose Multiplatform (CMP)</span>
-                </div>
-                
-                <div class="skill-group-title" style="margin-bottom: 12px;">
-                    <i class="fa-solid fa-layer-group"></i> Architecture & State
-                </div>
-                <div class="tags-container">
-                    <span class="skill-tag">MVVM</span><span class="skill-tag">MVI</span><span class="skill-tag">MVC</span>
-                    <span class="skill-tag">Clean Architecture</span><span class="skill-tag">BLoC Pattern</span>
-                    <span class="skill-tag">Provider</span>
-                </div>
-            </div>
-
-            <div class="glass-card" style="display: block;">
-                <div class="skill-group-title" style="margin-bottom: 12px;">
-                    <i class="fa-solid fa-microchip"></i> Advanced Android & CMP
-                </div>
-                <div class="tags-container" style="margin-bottom: 25px;">
-                    <span class="skill-tag">Coroutines</span><span class="skill-tag">Koin</span><span class="skill-tag">Ktor</span>
-                    <span class="skill-tag">Hilt</span><span class="skill-tag">Room</span><span class="skill-tag">DataStore</span>
-                    <span class="skill-tag">Flow</span><span class="skill-tag">Paging3</span><span class="skill-tag">Navigation Component</span>
-                    <span class="skill-tag">Services</span><span class="skill-tag">WorkManager</span><span class="skill-tag">ExoPlayer</span>
-                    <span class="skill-tag">Broadcast Receiver</span><span class="skill-tag">Alarm Manager</span>
-                </div>
-
-                <div class="skill-group-title" style="margin-bottom: 12px;">
-                    <i class="fa-solid fa-mobile-screen-button"></i> Flutter & iOS Specifics
-                </div>
-                <div class="tags-container">
-                    <span class="skill-tag">Hands-on iOS development</span><span class="skill-tag">GoRouter</span>
-                    <span class="skill-tag">Platform Channels (Native Integration)</span><span class="skill-tag">Widget Lifecycle</span>
-                </div>
-            </div>
-
-            <div class="glass-card" style="display: block;">
-                <div class="skill-group-title" style="margin-bottom: 12px;">
-                    <i class="fa-solid fa-palette"></i> UI/UX Design
-                </div>
-                <div class="tags-container" style="margin-bottom: 25px;">
-                    <span class="skill-tag">Jetpack Compose</span><span class="skill-tag">CMP UI</span><span class="skill-tag">Material Design 3</span>
-                    <span class="skill-tag">Flutter Widgets</span><span class="skill-tag">XML</span><span class="skill-tag">Custom Views</span><span class="skill-tag">Coil</span>
-                </div>
-
-                <div class="skill-group-title" style="margin-bottom: 12px;">
-                    <i class="fa-solid fa-cloud-arrow-up"></i> Tools, APIs & Deployment
-                </div>
-                <div class="tags-container">
-                    <span class="skill-tag">Firebase</span><span class="skill-tag">Google Maps & Places API</span>
-                    <span class="skill-tag">Retrofit</span><span class="skill-tag">Socket.io</span><span class="skill-tag">Razorpay</span>
-                    <span class="skill-tag">In-App Purchases</span><span class="skill-tag">AdMob</span><span class="skill-tag">Branch.io</span>
-                    <span class="skill-tag">Git</span><span class="skill-tag">Postman</span><span class="skill-tag">Google Play Console</span>
-                    <span class="skill-tag">App Store Connect</span><span class="skill-tag">TestFlight</span>
-                </div>
-            </div>
-
         </div>
     </section>
 
@@ -463,20 +817,87 @@
         </div>
     </section>
 
-    <section id="certifications" class="container">
-        <h2 class="section-title">Certifications</h2>
-        <div class="glass-card" style="text-align: center; padding: 60px 20px;">
-            <i class="fa-solid fa-certificate fa-3x" style="color: rgba(255,255,255,0.1); margin-bottom: 15px;"></i>
-            <p style="color: var(--text-dim);">Certification details and verifiable links will be updated here shortly.</p>
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="grid-container">
+
+                <div class="glass-card">
+                    <div style="display: flex; align-items: flex-start; gap: 20px;">
+                        <div style="background: rgba(0, 242, 254, 0.1); padding: 15px; border-radius: 12px;">
+                            <i class="fa-solid fa-medal fa-2xl" style="color: var(--primary);"></i>
+                        </div>
+                        <div style="flex-grow: 1;">
+                            <h3 class="project-title" style="margin-bottom: 5px;">Associate Android Developer</h3>
+                            <p
+                                style="color: var(--primary); font-size: 0.85rem; font-weight: 600; margin-bottom: 10px;">
+                                Google / Coursera</p>
+                            <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 20px;">
+                                Validates proficiency in Android app development using Kotlin, Jetpack libraries, and
+                                Material Design principles.
+                            </p>
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Verify Credentials
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <div style="display: flex; align-items: flex-start; gap: 20px;">
+                        <div style="background: rgba(79, 172, 254, 0.1); padding: 15px; border-radius: 12px;">
+                            <i class="fa-solid fa-code fa-2xl" style="color: var(--secondary);"></i>
+                        </div>
+                        <div style="flex-grow: 1;">
+                            <h3 class="project-title" style="margin-bottom: 5px;">Flutter Development Bootcamp</h3>
+                            <p
+                                style="color: var(--primary); font-size: 0.85rem; font-weight: 600; margin-bottom: 10px;">
+                                Udemy / App Brewery</p>
+                            <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 20px;">
+                                Comprehensive certification covering Dart, BLoC state management, and cross-platform
+                                architecture for iOS and Android.
+                            </p>
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Verify Credentials
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <div style="display: flex; align-items: flex-start; gap: 20px;">
+                        <div style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 12px;">
+                            <i class="fa-solid fa-shield-halved fa-2xl" style="color: #94a3b8;"></i>
+                        </div>
+                        <div style="flex-grow: 1;">
+                            <h3 class="project-title" style="margin-bottom: 5px;">System Design for Mobile Engineers
+                            </h3>
+                            <p
+                                style="color: var(--primary); font-size: 0.85rem; font-weight: 600; margin-bottom: 10px;">
+                                Educative.io</p>
+                            <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 20px;">
+                                Advanced training on high-level architecture, scalability, and performance optimization
+                                for mobile infrastructure.
+                            </p>
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Verify Credentials
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p style="font-weight: 800; font-size: 1.2rem; margin-bottom: 5px; color: #fff; letter-spacing: 1px;">AVANTIKA RAO</p>
+            <p style="font-weight: 800; font-size: 1.2rem; margin-bottom: 5px; color: #fff; letter-spacing: 1px;">
+                AVANTIKA RAO</p>
             <p style="font-size: 0.9rem;">Mobile Application Developer &copy; 2026</p>
         </div>
     </footer>
 
 </body>
+
 </html>

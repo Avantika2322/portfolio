@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avantika Rao | Mobile Developer</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- CORE VARIABLES --- */
+        :root {
+            --primary: #6366f1;
+            --secondary: #a855f7;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --nav-height: 70px;
+        }
+
+        /* --- GLOBAL STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-top: var(--nav-height);
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- GUARANTEED HORIZONTAL NAVBAR --- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            z-index: 1000;
+        }
+
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* --- SECTION SPACING --- */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 80px 0 40px 0;
+        }
+        
+        .hero-name {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .hero-title {
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
+        .contact-info i {
+            color: var(--primary);
+            margin-right: 8px;
+        }
+
+        /* --- CARD DESIGN & CSS GRID (Guaranteed Spacing) --- */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px; /* This guarantees space between cards */
+        }
+
+        .glass-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        /* --- EXPERIENCE TIMELINE --- */
+        .experience-box {
+            border-left: 3px solid var(--primary);
+            padding-left: 25px;
+            margin-bottom: 40px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 5px;
+        }
+
+        .exp-role {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .exp-date {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .exp-company {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .exp-details {
+            list-style-position: inside;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
+        .exp-details li { margin-bottom: 8px; }
+
+        /* --- SKILLS TAGS --- */
+        .skill-tag {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 0 8px 8px 0;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            background: #070b14;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-dim);
+        }
+
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+            }
+            .nav-links {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            body { padding-top: 120px; }
+            .hero-name { font-size: 2.5rem; }
+            .exp-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="nav-brand">AVANTIKA RAO</a>
+        <ul class="nav-links">
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
+
+    <header id="summary" class="hero container">
+        <div class="glass-card">
+            <h1 class="hero-name">Avantika Rao</h1>
+            <p class="hero-title">Mobile Application Developer</p>
+            
+            <div class="contact-info">
+                <span><i class="fa-solid fa-envelope"></i> raoavantika51@gmail.com</span>
+                <span><i class="fa-solid fa-phone"></i> 7303903867</span>
+                <span><i class="fa-brands fa-linkedin"></i> in/avantika-rao-054001la</span>
+                <span><i class="fa-solid fa-location-dot"></i> Gurgaon, Haryana, India</span>
+            </div>
+            
+            <p style="color: var(--text-dim); font-size: 1.05rem;">
+                4+ years of experience specializing in high-performance Android, Flutter, and Compose Multiplatform (CMP) development. Proven track record of delivering 10+ scalable applications across logistics, HR, e-commerce, and social media domains. Expert in Clean Architecture, reactive state management, and end-to-end deployment via Google Play Console and App Store Connect.
+            </p>
+        </div>
+    </header>
+
+    <section id="experience" class="container">
+        <h2 class="section-title">Professional Experience</h2>
+        
+        <div class="experience-box">
+            <div class="exp-header">
+                <span class="exp-role">Mobile Application Developer</span>
+                <span class="exp-date">March 2025 - Present</span>
+            </div>
+            <div class="exp-company">Binary Semantics Limited | Gurugram</div>
+            <ul class="exp-details">
+                <li>Led development of high-performance applications using Flutter and Compose Multiplatform (CMP), ensuring seamless UI consistency.</li>
+                <li>Leveraged Platform Channels and CMP interop to integrate native device functionalities.</li>
+                <li>Managed complete application lifecycle from Clean Architecture design to Google Play Console and App Store Connect deployment.</li>
+            </ul>
+        </div>
+
+        <div class="experience-box">
+            <div class="exp-header">
+                <span class="exp-role">Android Developer</span>
+                <span class="exp-date">Sept 2021 - Feb 2025</span>
+            </div>
+            <div class="exp-company">Agicent Technologies | Noida</div>
+            <ul class="exp-details">
+                <li>Developed and maintained 8+ high-quality applications (Patriot Nation, Studio Think, Fastrack Fasting, Kistl, SnoopCrowd, etc.).</li>
+                <li>Leveraged Kotlin, Java, Jetpack Compose, and XML within MVVM and MVC architectures.</li>
+                <li>Integrated Socket.io for real-time chat, Google Maps API, and ExoPlayer for media streaming.</li>
+                <li>Utilized Retrofit, Room, Hilt, Coroutines, Flow, and Firebase for robust backend communication.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <h2 class="section-title">Key Projects</h2>
+            <div class="grid-container">
+                <div class="glass-card">
+                    <h3 style="color: var(--primary); margin-bottom: 10px;">Sirius</h3>
+                    <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 15px;">
+                        Cross-platform HR app using CMP to streamline attendance tracking and workflows. Built with Clean Architecture, Koin, Ktor, and Coil. Integrated Google Places API and DataStore.
+                    </p>
+                    <div><span class="skill-tag">CMP</span><span class="skill-tag">Ktor</span><span class="skill-tag">DataStore</span></div>
+                </div>
+
+                <div class="glass-card">
+                    <h3 style="color: var(--primary); margin-bottom: 10px;">CollaborIX</h3>
+                    <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 15px;">
+                        Dual-sided logistics marketplace using Flutter and BLOC. Enabled transparent bidding. Architected with GoRouter and optimized native features via platform channels.
+                    </p>
+                    <div><span class="skill-tag">Flutter</span><span class="skill-tag">BLOC</span><span class="skill-tag">GoRouter</span></div>
+                </div>
+
+                <div class="glass-card">
+                    <h3 style="color: var(--primary); margin-bottom: 10px;">OnclickIX</h3>
+                    <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 15px;">
+                        Logistics application facilitating transport and warehouse requirements. Features real-time CN tracking, dynamic price-acceptance, and automated Push Notifications.
+                    </p>
+                    <div><span class="skill-tag">Clean Arch.</span><span class="skill-tag">Push Notifications</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="glass-card">
+            <div style="margin-bottom: 20px;">
+                <h4 style="margin-bottom: 10px;">Languages & Frameworks</h4>
+                <span class="skill-tag">Java</span> <span class="skill-tag">Kotlin</span> <span class="skill-tag">Dart</span> <span class="skill-tag">Swift (Basics)</span>
+                <span class="skill-tag">Flutter</span> <span class="skill-tag">Compose Multiplatform (CMP)</span> <span class="skill-tag">Jetpack Compose</span>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <h4 style="margin-bottom: 10px;">Architecture</h4>
+                <span class="skill-tag">MVVM</span> <span class="skill-tag">MVI</span> <span class="skill-tag">MVC</span> <span class="skill-tag">Clean Architecture</span> <span class="skill-tag">BLOC</span>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 10px;">Tools & Integrations</h4>
+                <span class="skill-tag">Firebase</span> <span class="skill-tag">Google Maps API</span> <span class="skill-tag">Retrofit</span> <span class="skill-tag">Hilt & Koin</span> <span class="skill-tag">Socket.io</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="grid-container">
+                <div class="glass-card">
+                    <h3 style="color: var(--primary); margin-bottom: 5px;">Bachelor of Technology</h3>
+                    <p>Dronacharya Group of Institution</p>
+                    <p style="color: var(--text-dim); font-size: 0.9rem;">Greater Noida | 2021</p>
+                </div>
+                <div class="glass-card">
+                    <h3 style="color: var(--primary); margin-bottom: 5px;">12th Grade</h3>
+                    <p>Shishwa Mahanth</p>
+                    <p style="color: var(--text-dim); font-size: 0.9rem;">Deoria | 2016</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="container">
+        <h2 class="section-title">Certifications</h2>
+        <div class="glass-card" style="text-align: center; padding: 50px 20px;">
+            <p style="color: var(--text-dim);">Certification details and links will be added here.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p style="font-weight: 800; margin-bottom: 5px; color: #fff;">Avantika Rao</p>
+            <p style="font-size: 0.9rem;">Mobile Application Developer</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Avantika Rao | Portfolio</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+body { background:#0a0f1c; color:#e2e8f0; }
+.hero { background: linear-gradient(135deg,#4f46e5,#06b6d4); padding:100px 0; text-align:center; }
+.hero h1 { font-size:3rem; font-weight:bold; }
+.card { background:#111827; border:none; border-radius:15px; transition:0.3s; }
+.card:hover { transform:translateY(-5px); }
+.section-title { border-left:5px solid #06b6d4; padding-left:10px; margin-bottom:20px; }
+.badge-skill { background:#06b6d4; color:#000; margin:5px; }
+.navbar { background:#020617; }
+footer { background:#020617; }
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<div class="container">
+<a class="navbar-brand" href="#">Avantika Rao</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"></button>
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+<li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+<li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+<h1>Avantika Rao</h1>
+<p class="lead">4+ Years Experience | Android | Flutter | Compose Multiplatform</p>
+<a href="#" class="btn btn-light mt-3">GitHub</a>
+<a href="#" class="btn btn-outline-light mt-3">LinkedIn</a>
+</div>
+</section>
+
+<section id="about" class="py-5">
+<div class="container">
+<h2 class="section-title">About</h2>
+<p>Mobile Application Developer with 4+ years of experience delivering scalable apps across social, logistics, and e-commerce domains. Strong expertise in Clean Architecture, Flutter, Android, and CMP. fileciteturn1file1</p>
+</div>
+</section>
+
+<section id="skills" class="py-5 bg-dark">
+<div class="container">
+<h2 class="section-title">Skills</h2>
+<div>
+<span class="badge badge-skill">Java</span>
+<span class="badge badge-skill">Kotlin</span>
+<span class="badge badge-skill">Dart</span>
+<span class="badge badge-skill">Flutter</span>
+<span class="badge badge-skill">Compose</span>
+<span class="badge badge-skill">MVVM</span>
+<span class="badge badge-skill">Clean Architecture</span>
+<span class="badge badge-skill">Firebase</span>
+<span class="badge badge-skill">Google Maps</span>
+</div>
+</div>
+</section>
+
+<section id="experience" class="py-5">
+<div class="container">
+<h2 class="section-title">Experience</h2>
+<div class="row g-4">
+<div class="col-md-6">
+<div class="card p-4">
+<h5>Binary Semantics Limited</h5>
+<p>Mobile Developer (2025 - Present)</p>
+<p>Flutter & CMP development, cross-platform architecture, deployment.</p>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card p-4">
+<h5>Agicent Technologies</h5>
+<p>Android Developer (2021 - 2025)</p>
+<p>Developed 8+ apps using Kotlin, Java, MVVM, Firebase. fileciteturn1file0</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="projects" class="py-5 bg-dark">
+<div class="container">
+<h2 class="section-title">Projects</h2>
+<div class="row g-4">
+
+<div class="col-md-4"><div class="card p-3"><h6>Patriot Nation</h6><p>Social media app with auth, posts, likes.</p></div></div>
+<div class="col-md-4"><div class="card p-3"><h6>Studio Think</h6><p>Fitness app with audio & reminders.</p></div></div>
+<div class="col-md-4"><div class="card p-3"><h6>Fastrack Fasting</h6><p>Health app with tracking & chat.</p></div></div>
+<div class="col-md-4"><div class="card p-3"><h6>Kistl</h6><p>E-commerce app with cart & maps.</p></div></div>
+<div class="col-md-4"><div class="card p-3"><h6>SnoopCrowd</h6><p>Dating app with matching & chat.</p></div></div>
+<div class="col-md-4"><div class="card p-3"><h6>CollaborIX</h6><p>Logistics marketplace (Flutter).</p></div></div>
+
+</div>
+</div>
+</section>
+
+<section id="certifications" class="py-5">
+<div class="container">
+<h2 class="section-title">Certifications</h2>
+<div class="card p-3 mb-3">Certification 1 <a href="#">Add Link</a></div>
+<div class="card p-3">Certification 2 <a href="#">Add Link</a></div>
+</div>
+</section>
+
+<section id="contact" class="py-5 bg-dark">
+<div class="container">
+<h2 class="section-title">Contact</h2>
+<p><i class="bi bi-envelope"></i> raoavantika51@gmail.com</p>
+<p><i class="bi bi-phone"></i> 7303903867</p>
+<p><i class="bi bi-geo-alt"></i> Gurgaon / Noida, India</p>
+<a href="#" class="btn btn-info"><i class="bi bi-github"></i> GitHub</a>
+<a href="#" class="btn btn-primary"><i class="bi bi-linkedin"></i> LinkedIn</a>
+</div>
+</section>
+
+<footer class="text-center py-3">
+<p>© 2026 Avantika Rao</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> -->
+
+
